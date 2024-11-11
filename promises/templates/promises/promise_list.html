@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise Tracker</title>
+</head>
+<body>
+    <h1>Government Promise Tracker</h1>
+    <ul>
+        {% for promise in promises %}
+            <li>
+                <strong>{{ promise.title }}</strong> - Status: {{ promise.get_status_display }}
+                <p>{{ promise.description }}</p>
+                <p>Promised on: {{ promise.date_promised }}</p>
+                <p>Last updated: {{ promise.date_updated }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
